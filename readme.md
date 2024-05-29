@@ -59,3 +59,4 @@ this will generate the file `deployment_<FUNCTIONDIR>.yaml` and save it into the
 After forking the repo into your own github account, choose `Settings` -> `Secrets` of the forked repo within github. Add the secret `KUBE_CONFIG_DATA` and place a base64 encoded version of your clusters kubeconfig which can be performed by using `https://www.base64encode.org/` or via cli tools. The Kubeconfig can be downloaded within the General Settings menu option of Kyma. This of course could be automated by editing the github action to rely on the cli tools of your cloud provider.
 
 The parameters for deployment are defined within the `package.json` of the function within the `buildParameters` object. Also important is the `name` and `main` defined in the package.json. This `name` must match the folder name of the function, in this case `examplefn`. The `main` property is used to determine the actually function defintion, in this case `main.js`.
+
