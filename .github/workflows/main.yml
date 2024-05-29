@@ -27,6 +27,8 @@ jobs:
         echo '${{ steps.file_changes.outputs.files_modified}}'
     - name: Setup Node.js
       uses: actions/setup-node@v1.1.0
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         node-version: '10.x'
     - run: npm install  
